@@ -186,8 +186,3 @@ class RootApprox:
     @classmethod
     def printOut(cls, headers, out):
         print(tabulate(out, headers=headers, tablefmt="fancy_grid"))        
-
-a = RootApprox(fx = lambda x: x**3 - x - 2)
-
-header, out = a.bisection(1, 2, iters = 20, correction = 0.0001, _print_result = False)
-RootApprox.printOut(header, out[-5:])
