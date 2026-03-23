@@ -8,13 +8,13 @@
 
 ## DEPENDENCIES
 
-bash
 ```
 pip install tabulate
 ```
 
 ## DOCUMENTATION
 
+```
 class RootApprox(fx = None, Fx = None, gx = None, decimals = None)
     Description:
     - The base class template for doing root approximations
@@ -25,7 +25,8 @@ class RootApprox(fx = None, Fx = None, gx = None, decimals = None)
     - gx : the chosen form of fx where x = g(x), should be expressed as lambda
     - decimals : the decimal places to round the outputs from,
                : will not round the number when value is None
-
+```
+```
 RootApprox.__round(self, num)
     Description:
     - rounds the number depending on self.decimals
@@ -36,7 +37,8 @@ RootApprox.__round(self, num)
 
     Returns:
     - Rounded number
-
+```
+```
 RootApprox.f(self, x), RootApprox.F(self, x), RootApprox.g(self, x)
     Description:
     - Uses the stored value in the class (fx, Fx, or gx) to compute given the parameter
@@ -46,7 +48,8 @@ RootApprox.f(self, x), RootApprox.F(self, x), RootApprox.g(self, x)
 
     Returns:
     - Solved value
-
+```
+```
 RootApprox.bisection(self, left, right, iters, correction = None, _print_result = True)
     Description:
     - Uses the bisection method to find the root over a given interval
@@ -63,7 +66,8 @@ RootApprox.bisection(self, left, right, iters, correction = None, _print_result 
     Returns:
     - header : header of the table if user should want to print it in table
     - out : the output of the method per iteration
-
+```
+```
 RootApprox.secant(self, xnO, xnI, iters, correction = None, _print_result = True)
     Description:
     - Uses the secant method to find the root
@@ -80,7 +84,8 @@ RootApprox.secant(self, xnO, xnI, iters, correction = None, _print_result = True
      Returns:
     - header : header of the table if user should want to print it in table
     - out : the output of the method per iteration
-
+```
+```
 RootApprox.newtons(self, init, iters, correction = None, _print_result = True)
     Description:
     - Uses the newton-raphson method to find the root
@@ -96,7 +101,8 @@ RootApprox.newtons(self, init, iters, correction = None, _print_result = True)
      Returns:
     - header : header of the table if user should want to print it in table
     - out : the output of the method per iteration
-
+```
+```
 RootApprox.fixedpoint(self, init, iters, correction = None, _print_result = True)
     Description:
     - Uses the fixed-point iteration method to find the root
@@ -112,7 +118,9 @@ RootApprox.fixedpoint(self, init, iters, correction = None, _print_result = True
      Returns:
     - header : header of the table if user should want to print it in table
     - out : the output of the method per iteration
-
-RootApprox.fixedpoint(cls, headers, out)
+```
+```
+RootApprox.printOut(cls, headers, out)
     Description:
     - Prints a table based on the given headers and table content
+```
